@@ -21,7 +21,7 @@ let tuEntrada;
 let tuFormaDePago;
 const arrayPersonas = []
 
-for(let i = 0; i < 2; i++){
+for(let i = 0; i < 10; i++){
 
     tuNombre= prompt("Ingresar su nombre");
     tuEdad= parseInt(prompt("Ingresar su edad"));
@@ -39,20 +39,14 @@ for(let i = 0; i < 2; i++){
         tuEntrada,
         tuFormaDePago,}
     );
-
     console.log(persona);
     arrayPersonas.push(persona);
-    console.log(arrayPersonas);
-
-    
-
 }
 
-console.log(Persona[tuNombre].includes(`Micaela`));
-console.log(Persona[tuNombre].includes(`Nahuel`));
+console.log(arrayPersonas[3].nombre);
 
-Persona.reverse();
-console.log(Persona.tuNombre);
+arrayPersonas.reverse();
+console.log(arrayPersonas);
 
 
 
