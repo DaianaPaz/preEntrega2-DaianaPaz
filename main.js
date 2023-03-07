@@ -19,6 +19,7 @@ let tuNombre;
 let tuEdad;
 let tuEntrada;
 let tuFormaDePago;
+const arrayPersonas = []
 
 for(let i = 0; i < 2; i++){
 
@@ -32,30 +33,32 @@ for(let i = 0; i < 2; i++){
     tuEntrada= prompt("Tipo de entrada: 2D, 3D o 4D");
     tuFormaDePago= prompt("Forma de pago: efectivo, credito o debito");
 
+    const persona = new Persona(
+        {tuNombre,
+        tuEdad,
+        tuEntrada,
+        tuFormaDePago,}
+    );
+
+    console.log(persona);
+    arrayPersonas.push(persona);
+    console.log(arrayPersonas);
+
+    
+
 }
 
+console.log(Persona[tuNombre].includes(`Micaela`));
+console.log(Persona[tuNombre].includes(`Nahuel`));
+
+Persona.reverse();
+console.log(Persona.tuNombre);
 
 
-const persona1 = new Persona(
-    {
-        tuNombre,
-        tuEdad,
-        tuEntrada,
-        tuFormaDePago,
-    }
-);
 
-const persona2 = new Persona(
-    {
-        tuNombre,
-        tuEdad,
-        tuEntrada,
-        tuFormaDePago,
-    }
-)
 
-console.log(persona1);
-console.log(persona2);
+
+
 
 
 
